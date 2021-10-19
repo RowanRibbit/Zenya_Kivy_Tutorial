@@ -1,0 +1,98 @@
+#:kivy 1.11.1
+
+<GameScreen>:
+  canvas:
+
+    Color:
+      rgba: 0,0,0,1
+    Rectangle:
+      pos: root.x+5, root.y+5
+      size: root.width-10, root.height-10
+    Color:
+      rgba: 1,1,1,1
+    Rectangle:
+      pos:root.x, root.y
+      size: root.width, root.height
+
+  FloatLayout:
+    pos: 0, 0
+    size: root.width, root.height
+    
+    Label:
+      pos_hint: {'x': .1, 'y': .85}
+      size_hint: .7, .1
+      text_size: self.size
+      halign: 
+      text: 'bote'
+      font_size: 40
+      bold: True
+      color: 0,0,0,1
+    
+    GridLayout:
+      pos_hint: {'x': .1, 'y': .25}
+      size_hint: None, None
+      size: root.width*.8, root.width*.8
+      cols: 2
+      # could pass in buttons, but want custom widget, button as background with image on top with a border
+      ImageBox:
+      ImageBox:
+      ImageBox:
+      ImageBox:
+
+    ProgressBar:
+      pos_hint: {'x': .1, 'y': .05}
+      size_hint: .8, .1
+
+<ImageBox>:
+  canvas:
+    Color:
+      rgba: 0,0,0,1
+    Rectangle: 
+      pos: root.x, root.y
+      size: root.width, root.height
+    Color:
+      rgba: 1,1,1,1
+    Rectangle:
+      pos: root.x+5, root.y+5
+      size: root.width-10, root.height-10
+  # shouldnt need a size when placed into GridLayout
+  Button:
+    background_normal: str(False)
+    pos: root.x+5, root.y+5
+    size: root.width-10, root.height-10
+  Image:
+    source: 'Images/diamante.png'
+    pos: root.x+5, root.y+5
+    size: root.width-10, root.height-10
+
+<ProgressBar>:
+  # will be using BorderImage within canvas
+  canvas:
+    Color:
+      rgba: 0,0,0,1
+    Rectangle:
+      pos: self.x, self.y
+      size: self.width, self.height
+    Color:
+      rgba: 1,1,1,1
+    Rectangle:
+      pos: self.x+5, self.y+5
+      size: self.width-10, self.height-10
+    Color:
+      rgba: 0,0.5,0.2,1
+    Rectangle:
+      pos: self.x+5, self.y+5
+      size: (self.width/2)-10, self.height-10
+    Color:
+      rgba: 1,1,1,1
+    BorderImage:
+      source: 'Images/trophy.png'
+      # want to be 20px from the top and and bottom, 40px from the rhs
+      pos: self.width+10, self.y+20
+      # want a square trophy image
+      size: self.height-40, self.height-40
+
+    
+
+
+  
