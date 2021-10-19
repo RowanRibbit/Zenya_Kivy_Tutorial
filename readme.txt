@@ -33,3 +33,4 @@ Learning Process
 - Will primarily focus on building desktop applications
 
 # Done through https://replit.com due to issues with installing Kivy
+# oh god why is one of the pictures upside down when I use the size command on itself
