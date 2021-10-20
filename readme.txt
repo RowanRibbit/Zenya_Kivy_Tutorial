@@ -34,3 +34,4 @@ Learning Process
 
 # Done through https://replit.com due to issues with installing Kivy
 # oh god why is one of the pictures upside down when I use the size command on itself
+# something erroring in the .py file but can't figure out what it is; occured once the make_selection function was called. Copied the file from the notes and seems to work now, though can't spot the inconsistency between the two
